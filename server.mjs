@@ -4,17 +4,18 @@ import cors from "cors";
 import dotenv from "dotenv";
 
 const app = express();
-const port = 4000;
+//const port = 4000;
 dotenv.config();
-/*app.use(
+
+app.use(
     cors({
       origin: [
-        "http://localhost:4000"//,
-        //"https://backend-927c.onrender.com",
-        //"https://frontend-9vuf.onrender.com",
+        "http://localhost:4000",
+        "https://backend-weather-1zts.onrender.com",
+        "https://frontend-weather-s5he.onrender.com",
       ], // Replace with your frontend's origin
     })
-  );*/
+  );
 
 app.get("/api", (req, res) => {
   //get the query for the api search
@@ -114,4 +115,4 @@ app.get("/hourlyCall", (req, res) => {
 
 
 //log that the server is running properly
-app.listen(port, () => console.log(`Server running on port ${port}`));
+app.listen(4000, () => console.log(`Server running on port 4000`));
