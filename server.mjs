@@ -28,6 +28,7 @@ app.get("/api", (req, res) => {
       process.env.REACT_APP_API_KEY,
   )
     .then((response) => {
+      console.log(process.env.REACT_APP_API_LINK_BASE_GEO + input + "&limit=5&appid=" + process.env.REACT_APP_API_KEY);
       if (!response.ok) {
         throw new Error("network response not ok");
       }
